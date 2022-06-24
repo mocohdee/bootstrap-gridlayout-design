@@ -1,3 +1,38 @@
+<?php
+//1/ database connection
+$server = "localhost";
+$username = "root";
+$password = "";
+$database = "zalego";
+
+
+$conn = mysqli_connect($server,$username,$password,$database);
+
+if(isset($_POST ['submitButton'] ) )
+{
+  //fetch form data
+  $email =$_POST['email'];
+  $sqlQuery = mysqli_query($conn,"INSERT INTO subscribers(email)
+  VALUES('$email') ");
+
+  if($sqlQuery)
+  {
+    echo "Success";
+  } 
+  else
+  {
+    echo "Error occured";
+  }
+
+}
+    
+?>
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +44,7 @@
 </head>
 <body>
     <!-- Nav bar starts here -->
-    <nav class="navbar navbar-expand-lg bg-light fixed-top shadow">
+    <!-- <nav class="navbar navbar-expand-lg bg-light fixed-top shadow">
         <div class="container-fluid">
             <a href="#" class="navbar-brand">Zalego Academy</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbardisplaynavigations" aria-expanded="false">
@@ -26,7 +61,7 @@
              </div>
 
         </div>
-    </nav>
+    </nav> -->
    <!-- Nav bar ends -->
    <main class="p-5 mb-4 bg-light">
        <h1 style="padding-top: 30px;">About us</h1>
@@ -99,11 +134,11 @@
 
         </div>
         <p style="text-align:center; padding-top: 50px; color: gray;">Subscribe to get information,latest news about <br>Zalego Academy</p>
-        <form>
+        <form action = "aboutus.php" method = POST>
             <div class="row pt-5">
                 <div class="col-lg-12" style="text-align:center;">
-                    <input type="email" placeholder="Enter your email address">
-                    <button class="btn btn-primary">Subscribe</button>
+                    <input type="email" name="email" placeholder="Enter your email address">
+                    <button class="btn btn-primary" name = "submitButton">Subscribe</button>
 
                 </div>
             </div>

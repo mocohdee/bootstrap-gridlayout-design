@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="bootstrap-5.2.0-beta1-dist/css/bootstrap.min.css">
 </head>
 <body>
+   
     <!-- Nav bar starts here -->
     <nav class="navbar navbar-expand-lg bg-light fixed-top shadow">
         <div class="container-fluid">
@@ -19,7 +20,7 @@
                 <div class="navbar-nav">
                     <a href="#" class="nav-link active">Home</a>
                     <a href="aboutus.html" class="nav-link">About us</a>
-                    <a href="#" class="nav-link">Contact us</a>
+                    <a href="enroll.php" class="btn btn-primary">Register Now</a>
 
                 </div>
 
@@ -65,9 +66,9 @@
 
         </div>
         
-    <!-- contact us starts here -->
+    <!-- Register now starts here -->
         <div class="row pt-5">
-            <h1>Contact Us</h1>
+            <h1>Register now</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, voluptatibus.
                  Doloremque officiis ipsum iure blanditiis adipisci, voluptate amet! Nulla tenetur magnam 
                  repellat nam laudantium quibusdam fugit at ex aliquam dolore?
@@ -76,35 +77,40 @@
             <form >
                 <div class="row">
                     <div class="mb-3 col-lg-6">
-                        <label for="firstname" class="form-label">Firstname</label>
-                        <input type="text" class="form-control" placeholder="Enter your first name">
+                        <label for="firstname" class="form-label">Fullname</label>
+                        <input type="text" class="form-control" placeholder="Enter your full name">
                     </div>
-                    <div class="mb-3 col-lg-6">
-                        <label for="firstname" class="form-label">Lastname</label>
-                        <input type="text" class="form-control" placeholder="Enter your last name">
-                    </div>
-                </div>
-                <div class="row">
                     <div class="mb-3 col-lg-6">
                         <label for="firstname" class="form-label">Phone number</label>
                         <input type="tel" class="form-control" placeholder="Enter your phone number">
                     </div>
+                </div>
+                <div class="row">
                     <div class="mb-3 col-lg-6">
-                        <label for="firstname" class="form-label">Email</label>
-                        <input type="email" class="form-control" placeholder="Enter your email">
+                        <label for="firstname" class="form-label">Email address</label>
+                        <input type="email" class="form-control" placeholder="Enter your email address">
+                    </div>
+                    <div class="mb-3 col-lg-6">
+                        <label for="firstname" class="form-label">Gender</label>
+                        <input type="gender" class="form-control" placeholder="Select your gender">
                     </div>
                 </div>
                 <div class="row">
-                    <div class="mb-3 col-lg-12">
-                        <label for="message" class="form-label">Your message</label>
-                        <textarea cols="30" rows="10" class="form-control"></textarea>
+                    <div class="mb-3 col-lg-6">
+                        <label for="firstname" class="form-label">Courses</label>
+                        <input type="Courses" class="form-control" placeholder="Select your course">
 
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary">Send a message</button>
+                <button type="submit" class="btn btn-primary">Submit application</button>
+                <p style="text-align:center; padding-top: 50px; color: gray;">Subscribe to get information,latest news about <br>Zalego Academy</p>
+            <div class="row pt-5">
+                <div class="col-lg-12" style="text-align:center;">
+                    <input type="email" name="email" placeholder="Enter your email address">
+                    <button class="btn btn-primary" name = "submitButton">Subscribe</button>
             </form>
         </div>
-    <!-- end contact us -->
+    <!-- end register now -->
 
     <hr>
     <footer>
